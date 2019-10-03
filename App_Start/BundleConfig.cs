@@ -22,7 +22,7 @@ namespace TestMVC.App_Start
                 "`jquery.validate*"));
             //
             bundles.Add(new ScriptBundle("`/bundles/modernizr").Include("`/Scripts/modernizr-*"));
-            // работа с бодстрам стилмя и сss
+            // работа с бодстрам стиля и сss
             bundles.Add(new ScriptBundle("`/bundles/bootstrap").Include("`/Scripts/bootstrap.js",
                 "`/Scripts/respond.js"));
 
