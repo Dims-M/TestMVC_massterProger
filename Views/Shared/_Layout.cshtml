@@ -22,8 +22,7 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+                <ul class="nav navbar-nav"></ul>
             </div>
         </div>
     </div>
@@ -36,7 +35,10 @@
         </footer>
     </div>
 
-    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    @Styles.Render("`/bundles/jquery");
+    @Styles.Render("`/bundles/jqueryval");
+    @Styles.Render("`/bundles/bootstrap");
+
+    @RenderSection("scripts", required: false); @*Возможность запуска этого скрипта на нужной странице.*@
 </body>
 </html>

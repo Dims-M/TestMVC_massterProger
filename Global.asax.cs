@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using TestMVC.App_Start;
+//using TestMVC.App_Start;
 
 namespace TestMVC
 {
@@ -17,7 +17,7 @@ namespace TestMVC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             //подключение пакетов из апп дата.
-            BundleConfig.RegisterBundles(BundleTable.Bundles); // подключение настроек по умолчанию.
+            App_Start.BundleConfig.RegisterBundles(BundleTable.Bundles); // подключение настроек по умолчанию.
 
 
         }
