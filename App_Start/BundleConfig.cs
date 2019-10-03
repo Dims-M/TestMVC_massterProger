@@ -16,11 +16,14 @@ namespace TestMVC.App_Start
         {
             //в обьект bundles(пакеты) добавляем нужные элементы скритов, ссs и другие. И теперь в независимости от версии и при обновлении будут запускатся самыемновые версии.
             bundles.Add(new ScriptBundle("`/bundles/jquery").Include("`/Scripts/jquery-{version}.js"));
-           
-            //
-            bundles.Add(new ScriptBundle("`/bundles/jqueryval").Include("`/Scripts/jquery.unobtrusiv*.",
+
+            //jquery Validation и jquery.unobtrusive
+            //Validation - Этот плагин jQuery делает простую проверку формы на стороне клиента тривиальной, предлагая множество опций для настройки. 
+            //unobtrusive - работа с нтм5 и его элемантаи
+            bundles.Add(new ScriptBundle("`/bundles/jqueryval").Include("`/Scripts/jquery.unobtrusive*.",
                 "`jquery.validate*"));
-            //
+
+            //Modernizr-это небольшая и простая библиотека JavaScript, которая помогает вам использовать преимущества новых веб-технологий (CSS3, HTML5)
             bundles.Add(new ScriptBundle("`/bundles/modernizr").Include("`/Scripts/modernizr-*"));
             // работа с бодстрам стиля и сss
             bundles.Add(new ScriptBundle("`/bundles/bootstrap").Include("`/Scripts/bootstrap.js",
