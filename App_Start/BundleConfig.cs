@@ -25,6 +25,7 @@ namespace TestMVC.App_Start
 
             //Modernizr-это небольшая и простая библиотека JavaScript, которая помогает вам использовать преимущества новых веб-технологий (CSS3, HTML5)
             bundles.Add(new ScriptBundle("`/bundles/modernizr").Include("`/Scripts/modernizr-*"));
+           
             // работа с бодстрам стиля и сss
             bundles.Add(new ScriptBundle("`/bundles/bootstrap").Include("`/Scripts/bootstrap.js",
                 "`/Scripts/respond.js"));
