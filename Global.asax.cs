@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-//using TestMVC.App_Start;
+using TestMVC.App_Start;
 
 namespace TestMVC
 {
