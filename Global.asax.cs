@@ -5,11 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of dfbded6... РЅРµ  СЂР°Р±РѕС‚Р°РµС‚ СЃРµСЂРІРµСЂ Р±РµСЃРєРѕРЅРµС‡РЅР°СЏ Р·Р°РіСЂСѓР·РєР°
-//using TestMVC.App_Start;
+using TestMVC.App_Start;
 
 namespace TestMVC
 {
@@ -22,7 +18,6 @@ namespace TestMVC
 
             //подключение пакетов из апп дата.
             App_Start.BundleConfig.RegisterBundles(BundleTable.Bundles); // подключение настроек по умолчанию.
-           // BundleConfig.RegisterBundles(BundleTable.Bundles); // подключение настроек по умолчанию.
 
 
         }
