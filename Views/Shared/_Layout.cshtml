@@ -1,40 +1,36 @@
-﻿@using System.Web.Optimization;
+﻿@using System.Web.Optimization
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Хрено сайт</title>
+
     @*Подключение стилей и контента*@
-    @Styles.Render("`/Content/css");
-    @Styles.Render("`/bundles/modernizr");
+    @Styles.Render("`/Content/css")
+    @Styles.Render("`/bundles/modernizr")
+    @Styles.Render("`/bundles/bootstrap")
 
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        @*<a class="navbar-brand" href="#">Navbar</a>*@
-        @Html.ActionLink("Главная","Index","Home", new {area = ""}, new {@class ="navbar-brand" }); @*// стандартный линк. Срествами Html хелпера. Указываем название ссылки, имя метода их контролллера.Которое надо запускать. И им самого контроллера*@
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        @*Html.ActionLink("Главная", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@  @* //cандартный линк. Срествами Html хелпера. Указываем название ссылки, имя метода их контролллера.Которое надо запускать. И им самого контроллера*@
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    @Html.ActionLink("Главная","Index","Home", null, new { @class = "nav-link" });
-                    @*<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>*@
-                </li>
-                <li class="nav-item">
-                    @*<a class="nav-link" href="#">Features</a>*@
-                </li>
-                <li class="nav-item">
-                    @*<a class="nav-link" href="#">Pricing</a>*@
-                </li>
-                <li class="nav-item">
-                    @*<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>*@
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                @*<a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>*@
+            </div>
         </div>
     </nav>
+    @*Html.ActionLink("Главная", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@  @* //cандартный линк. Срествами Html хелпера. Указываем название ссылки, имя метода их контролллера.Которое надо запускать. И им самого контроллера*@
+    @*Html.ActionLink("Главная", "Index", "Home", null, new { @class = "nav-link" })*@
+
 
     <div class="container body-content">
         @RenderBody()
@@ -45,10 +41,10 @@
     </div>
 
     @*подключения скриптов для страници*@
-    @Styles.Render("`/bundles/jquery");
-    @Styles.Render("`/bundles/jqueryval");
-    @Styles.Render("`/bundles/bootstrap");
-
-    @RenderSection("scripts", required: false); @*Возможность запуска этого скрипта на нужной странице.*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+   
+    @RenderSection("scripts", required: false) @*Возможность запуска этого скрипта на нужной странице.*@
 </body>
 </html>
