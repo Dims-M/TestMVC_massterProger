@@ -24,16 +24,20 @@ namespace TestMVC.App_Start
                                                                         "~/Scripts/jquery.validate*"));
             
             //Modernizr-это небольшая и простая библиотека JavaScript, которая помогает вам использовать преимущества новых веб-технологий (CSS3, HTML5)
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
            
             // работа с бодстрам стиля и сss
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js"));
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/respond.js"));
 
-            bundles.Add(new ScriptBundle("~/Content/css").Include("~/Content/bootstrap.css"));
-            bundles.Add(new ScriptBundle("~/Content/css").Include("~/Content/Site.css"));
-            //bundles.Add(new ScriptBundle("~/Content/css").Include("~/Content/bootstrap.css",
-            //                                                      "~/Content/Site.css"));
+            // bundles.Add(new ScriptBundle("~/Content/css").Include("~/Content/bootstrap.css"));
+            // bundles.Add(new ScriptBundle("~/Content/css").Include("~/Content/site.css"));
+            //bundles.Add(new StyleBundle("~/Content/Css").Include("~/Content/bootstrap.css",
+            //                                                      "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/site.css"));
         }
     }
 }
