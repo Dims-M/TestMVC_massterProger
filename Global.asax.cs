@@ -5,7 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of dfbded6... не  работает сервер бесконечная загрузка
 //using TestMVC.App_Start;
 
 namespace TestMVC
